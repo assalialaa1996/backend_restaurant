@@ -1,0 +1,158 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+	<!-- Navigation -->
+  <header>
+    <!-- Sidenav  -->
+    <div id="slide-out" class="side-nav">
+      <ul class="custom-scrollbar">
+        <!-- Logo -->
+        <li>
+          <div class="logo-wrapper waves-light waves-effect waves-light">
+            <a class="navbar-brand d-flex justify-content-center align-items-center dark-blue-text"
+              href="https://mdbootstrap.com/docs/jquery/admin/" target="_blank">
+          </div>
+        </li>
+        <!-- Logo -->
+        <!-- Search Form -->
+        <li>
+          <form class="search-form" role="search">
+            <div class="form-group md-form mt-0 mb-1 d-block">
+              <input type="text" class="form-control w-100" placeholder="Search">
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidenav -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top double-nav scrolling-navbar">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="dashboard-traffic.html">
+          <h1>CONGO FOOD</h1>
+        </a>
+
+        <div class="float-left">
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <div class="jumbotron color-grey-light mt-70">
+      <div class="d-flex align-items-center h-100">
+        <div class="container text-center py-5">
+          <h3 class="mb-0">CONNEXION</h3>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <!-- Navigation -->
+
+  <!--Main layout-->
+  <main class="pt-0">
+    <div class="container">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-md-6">
+
+          <!--Section: Content-->
+          <section class="mb-5">
+
+            <form method="post">
+
+              <div class="md-form md-outline">
+                <input type="email" name="email" id="defaultForm-email1"  class="form-control">
+                <label data-error="wrong" data-success="right" for="defaultForm-email1">Votre email</label>
+              </div>
+              <div class="md-form md-outline">
+                <input type="password" name="password" id="defaultForm-pass1" class="form-control">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass1">Votre mot de passe</label>
+              </div>
+
+
+              <div class="d-flex justify-content-between align-items-center mb-2">
+
+                <div class="form-check pl-0 mb-3">
+                  <input type="checkbox" class="form-check-input filled-in" id="new">
+                  <label class="form-check-label small text-uppercase card-link-secondary" for="new">Remember me</label>
+                </div>
+              </div>
+
+              <div class="text-center pb-2">
+                <input type="hidden" name="_csrf_token"
+                  value="{{ csrf_token('authenticate') }}"
+                >
+                <button type="submit" class="btn btn-primary mb-4">Connexion</button>
+
+                <p><a href="#">Mot de passe oublier</a></p>
+              </div>
+            </form>
+
+          </section>
+          <!--Section: Content-->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!-- Footer -->
+  <footer class="page-footer font-small elegant-color">
+
+    <div class="color-primary">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+{% endblock %}
+{% block javascripts %}
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="/js/mdb.min.js"></script>
+<!-- MDB Admin -->
+<script type="text/javascript" src="/js/mdb.admin.min.js"></script>
+<script src="/js/addons/maps/world/world_mill.js"></script>
+<script src="/js/jquery.2.1.1.min.js"></script>
+	
+{% endblock %}
